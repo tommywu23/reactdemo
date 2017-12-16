@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>货物统计 copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="货物统计-copy">
+            <g id="Group">
+                <g id="Group-2" transform="translate(1.500000, 2.500000)">
+                    <ellipse id="Oval-2" fill="#7B7673" cx="9.83606557" cy="26.8032787" rx="2.95081967" ry="3.19672131"></ellipse>
+                    <ellipse id="Oval-2-Copy" fill="#7B7673" cx="26.0655738" cy="26.8032787" rx="2.95081967" ry="3.19672131"></ellipse>
+                    <polyline id="Path-18" stroke="#7B7673" stroke-width="2.5" points="0 0 3.3212689 3.37236534 3.3212689 23.6065574 31.9672131 23.6065574"></polyline>
+                    <rect id="Rectangle-Copy" fill="#FF8500" x="25.0819672" y="2.95081967" width="5.40983607" height="7.86885246"></rect>
+                    <rect id="Rectangle-Copy-3" fill="#FF8500" x="25.0819672" y="12.7868852" width="5.40983607" height="7.86885246"></rect>
+                    <rect id="Rectangle-Copy-2" fill="#FFAF2D" x="6.39344262" y="2.95081967" width="19.1803279" height="7.86885246"></rect>
+                    <rect id="Rectangle-Copy-4" fill="#FFAF2D" x="6.39344262" y="12.7868852" width="19.1803279" height="7.86885246"></rect>
+                </g>
+                <rect id="Rectangle" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="35" height="35"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

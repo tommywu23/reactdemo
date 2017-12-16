@@ -1,0 +1,17 @@
+.option {
+	display: flex;
+}
+
+.option button {
+	margin: 10px 10px 10px 0;
+	padding: 10px;
+	background-color: #c0c0c0;
+}
+
+.goodSum {
+	margin-left: 10px;
+}
+
+.charts {
+	height: 500px;
+}

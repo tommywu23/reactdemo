@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>时间 copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M27.3777778,4.48 L4.62222222,4.48 L4.62222222,7.32444444 L27.3777778,7.32444444 L27.3777778,4.48 Z M28.8,18.7022222 L28.8,15.8577778 L27.3777778,8.74666667 L4.62222222,8.74666667 L3.2,15.8577778 L3.2,18.7022222 L4.62222222,18.7022222 L4.62222222,27.2355556 L18.8444444,27.2355556 L18.8444444,18.7022222 L24.5333333,18.7022222 L24.5333333,27.2355556 L27.3777778,27.2355556 L27.3777778,18.7022222 L28.8,18.7022222 Z M16,24.3911111 L7.46666667,24.3911111 L7.46666667,18.7022222 L16,18.7022222 L16,24.3911111 Z" id="path-1"></path>
+    </defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="时间-copy-3">
+            <g id="icon/shop" transform="translate(4.000000, 4.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

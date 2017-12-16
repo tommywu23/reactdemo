@@ -1,0 +1,47 @@
+.loginWrap {
+	width: 100%;
+	height: 100%;
+	background: #fff url('../../images/background.jpg');
+	text-align: center;
+	background-size: 100% 100%;
+	border: 1px solid #fff;
+}
+
+form > div {
+	margin: 2vw 0;
+}
+
+.login {
+	margin: 10vw 35vw;
+	padding: 3vw 2vw 4vw 2vw;
+	min-width: 300px;
+	background-color: #fff;
+}
+
+.logo img {
+	position: fixed;
+	top: 8vw;
+	left: 47.5vw;
+	width: 5vw;
+	height: 5vw;
+	border-radius: 50%;
+}
+
+.companyName {
+	margin-bottom: 2vw;
+}
+
+.login form div input {
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+	-webkit-appearance: normal;
+	outline: none;
+	width: 100%;
+	border-color: #a8a8a8;
+	border-style: none none inset none;
+	background-color: #fff;
+}
+
+.loginDesc {
+	margin: 2vw 0;
+	text-align: left;
+}

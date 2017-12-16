@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>跳转</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="跳转" stroke="#000000" stroke-width="3">
+            <circle id="Oval-4" cx="25.5" cy="25.5" r="15"></circle>
+            <polyline id="Path-2" points="17.25 18.9 32.1 18.9 32.1 33.75"></polyline>
+            <path d="M17.25,32.9524695 L30.8828995,19.31957" id="Path-3"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>消费者统计 copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="消费者统计-copy">
+            <g id="Group">
+                <g id="Group-112" transform="translate(2.500000, 2.000000)">
+                    <g id="Group-111" transform="translate(10.000000, 0.000000)">
+                        <path d="M4.60872701,9.27459016 L4.60872701,3.07248467 C4.60872701,1.37559824 5.98432525,3.1171298e-16 7.68121168,0 L7.68121168,0 C9.37809811,-3.1171298e-16 10.7536964,1.37559824 10.7536964,3.07248467 L10.7536964,9.27459016" id="Path-19-Copy-2" stroke="#4FC518" stroke-width="1.2" stroke-linecap="round"></path>
+                        <polygon id="Rectangle-31-Copy" fill="#B6EC16" points="0.887606683 4.63729508 19.0835437 4.63729508 19.9711504 30.9153005 0 30.9153005"></polygon>
+                        <path d="M7.68121168,9.27459016 L7.68121168,3.07248467 C7.68121168,1.37559824 9.05680993,3.1171298e-16 10.7536964,0 L10.7536964,0 C12.4505828,-3.1171298e-16 13.826181,1.37559824 13.826181,3.07248467 L13.826181,9.27459016" id="Path-19-Copy-3" stroke="#4FC518" stroke-width="1.2" stroke-linecap="round"></path>
+                    </g>
+                    <g id="Group-109" transform="translate(24.250000, 24.750000) rotate(-45.000000) translate(-24.250000, -24.750000) translate(19.000000, 21.500000)">
+                        <rect id="Rectangle-32" fill="#005AC8" x="0" y="0" width="10.5" height="6.5" rx="1.2"></rect>
+                        <rect id="Rectangle-33" fill="#1F00A2" x="0" y="1.5" width="10.5" height="1.5"></rect>
+                        <rect id="Rectangle-34-Copy" fill="#FF7500" x="8.4" y="4.5" width="1.575" height="1.5" rx="0.75"></rect>
+                        <rect id="Rectangle-34" fill="#FFA100" x="7.35" y="4.5" width="1.575" height="1.5" rx="0.75"></rect>
+                    </g>
+                    <path d="M6.5,17 L6.5,10.5 C6.5,8.84314575 7.84314575,7.5 9.5,7.5 L9.5,7.5 C11.1568542,7.5 12.5,8.84314575 12.5,10.5 L12.5,17" id="Path-19-Copy" stroke="#3C9314" stroke-width="1.2" stroke-linecap="round"></path>
+                    <polygon id="Rectangle-31" fill="#4FC518" points="1.04444444 12.5 22.4555556 12.5 23.5 31 0 31"></polygon>
+                    <path d="M10,17 L10,10.5 C10,8.84314575 11.3431458,7.5 13,7.5 L13,7.5 C14.6568542,7.5 16,8.84314575 16,10.5 L16,17" id="Path-19" stroke="#3C9314" stroke-width="1.2" stroke-linecap="round"></path>
+                </g>
+                <rect id="Rectangle" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="35" height="35"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+.card .add-subcompany {
+	margin: 20px;
+	padding: 8px;
+	width: 150px;
+	border-radius: 30px;
+	border: 1px solid #0076ff;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.card .list-col-subcompany {
+	padding-bottom: 20px;
+}
+.card .list-col-subcompany > * {
+	display: block;
+	margin: 20px;
+}

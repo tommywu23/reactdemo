@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>门店成员5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <pattern id="pattern-1" patternUnits="objectBoundingBox" x="0%" width="100%" height="100%">
+            <use xlink:href="#image-2"></use>
+        </pattern>
+        <image id="image-2" width="32" height="32" xlink:href="data:image/png;base64,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"></image>
+    </defs>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="门店成员5" stroke="#FFFFFF" stroke-width="2" fill="url(#pattern-1)">
+            <circle id="Oval-Copy-4" cx="25" cy="25" r="16"></circle>
+        </g>
+    </g>
+</svg>

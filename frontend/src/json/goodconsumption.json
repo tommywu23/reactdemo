@@ -1,0 +1,20 @@
+{
+	"goodConsumptionMap": [
+		{ "name": "苏州", "value": 150 },
+		{ "name": "杭州", "value": 150 },
+		{ "name": "深圳", "value": 150 }
+	],
+	"monthlyConsumption": [
+		{ "month": "JAN", "value": 220 },
+		{ "month": "FAB", "value": 230 },
+		{ "month": "MAR", "value": 420 },
+		{ "month": "APR", "value": 330 },
+		{ "month": "MAY", "value": 450 },
+		{ "month": "JUN", "value": 660 },
+		{ "month": "JUL", "value": 800 },
+		{ "month": "AUG", "value": 1000 },
+		{ "month": "SEP", "value": 1300 },
+		{ "month": "OCT", "value": 1300 },
+		{ "month": "DEC", "value": 1300 }
+	]
+}
