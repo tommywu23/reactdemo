@@ -81,7 +81,13 @@ const customerStatistics = class extends Component {
 					</ul>
 					<ul className="navigation-list navigation-small">
 						<Item
-							name={intl.get('good.product') + intl.get('good.creation')}
+							name={
+								intl.get('good.product') +
+								' ' +
+								intl.get('good.packaging') +
+								' ' +
+								intl.get('good.tag')
+							}
 							itemType="tagItemType"
 							// tag="FUW9392400"
 							id="goodCreationKey"
@@ -93,7 +99,7 @@ const customerStatistics = class extends Component {
 								this.setState({ navigatePage: p });
 							}}
 						/>
-						<Item
+						{/* <Item
 							name={intl.get('good.packaging') + intl.get('good.creation')}
 							id="packagingCreationKey"
 							icon={goodPackagingPic}
@@ -116,7 +122,7 @@ const customerStatistics = class extends Component {
 							onClick={p => {
 								this.setState({ navigatePage: p });
 							}}
-						/>
+						/> */}
 						<Item
 							name={intl.get('good.distribution')}
 							id="goodDistributionKey"
@@ -238,12 +244,12 @@ const customerStatistics = class extends Component {
 					{this.state.navigatePage === 'goodStockKey' ? (
 						<GoodStockSubPage />
 					) : null}
-					{this.state.navigatePage === 'packagingCreationKey' ? (
+					{/* {this.state.navigatePage === 'packagingCreationKey' ? (
 						<GoodCreationDashboard parent="PackagingProducts" />
 					) : null}
 					{this.state.navigatePage === 'tagCreationKey' ? (
 						<GoodCreationDashboard parent="TagProducts" />
-					) : null}
+					) : null} */}
 					{this.state.navigatePage === 'goodFleeingKey' ? (
 						// <GoodFleeingSubPage />
 						<GoodFleeingSubLHLHPage />
