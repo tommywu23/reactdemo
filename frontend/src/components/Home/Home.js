@@ -79,7 +79,7 @@ const Home = class extends Component {
 							<div className="normal-head font-app-title">常用的页面</div>
 							<div className="normal font-content-link clearfix">
 								<img src={homeBottom1}/>
-								<span>最近数据</span>	
+								<span>最近数据</span>
 							</div>
 							<div className="normal font-content-link clearfix">
 								<img src={homeBottom2}/>

@@ -376,7 +376,7 @@ const App = class extends Component {
 				<Router history={history}>
 					<div className="search-bar" ref="searchBar">
 						<div className="search-left">
-							<Link to="/" title="回到主页">
+							<Link to="/" title="回到主页" >
 								<img height="31" width="195" src={symbolsLogo} alt="mfg" />
 							</Link>
 						</div>
@@ -488,7 +488,7 @@ const App = class extends Component {
 			);
 		}
 		return (
-			<div className="screen" ref="screen">		
+			<div className="screen" ref="screen">
 				<div id="warning" className="rtBox"></div>
 				{header}
 				<MuiThemeProvider muiTheme={getMuiTheme()}>
@@ -535,18 +535,30 @@ const App = class extends Component {
 		);
 	}
 };
+//
+// function getScrollTop() {
+//         var scrollPos;
+//         if (window.pageYOffset) {
+//         scrollPos = window.pageYOffset; }
+//         else if (document.compatMode && document.compatMode != 'BackCompat')
+//         { scrollPos = document.documentElement.scrollTop; }
+//         else if (document.body) { scrollPos = document.body.scrollTop; }
+//         return scrollPos;
+// }
 
-function getScrollTop() {  
-        var scrollPos;  
-        if (window.pageYOffset) {  
-        scrollPos = window.pageYOffset; }  
-        else if (document.compatMode && document.compatMode != 'BackCompat')  
-        { scrollPos = document.documentElement.scrollTop; }  
-        else if (document.body) { scrollPos = document.body.scrollTop; }   
-        return scrollPos;   
+window.resetSearch = function(path) {
+	if(window.location.pathname !== path) {
+		$('.search-mid').css('marginLeft','420px');
+	} else {
+		$('.search-mid').css('margin','0 auto');
+	}
 }
 
-$(function () {
+$(function(){
+	resetSearch('/');
+})
+
+// $(function () {
     // $('.search-bar').nextAll('div').eq(0).children().css('marginTop','60px')
     // let h2=document.documentElement.clientHeight?document.documentElement.clientHeight:document.body.clientHeight
     // let h3=document.documentElement.scrollHeight?document.documentElement.scrollHeight:document.body.scrollHeight;
@@ -554,8 +566,7 @@ $(function () {
     // let tt = document.querySelector('.search-bar');
     // let scrollHeight = $(document).height();
     // let windowHeight = $(this).height();
-
-    window.onscroll = function() {
+    // window.onscroll = function() {
         // let scrollTop = $(window).scrollTop();
         // if(scrollTop + windowHeight + 60 >= scrollHeight){
         //     bb.style.display = 'flex';
@@ -570,8 +581,8 @@ $(function () {
         //     tt.style.position = 'fixed';
         //     $('.search-bar').nextAll('div').eq(0).children().css('marginTop','180px')
         // }
-    }
-})
+    // }
+// })
 
 
 
