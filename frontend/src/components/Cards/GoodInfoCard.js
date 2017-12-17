@@ -5,6 +5,7 @@ import Item from '../Navigation/Item';
 import edit from '../../images/edit.svg';
 import editSvg from '../../images/edit.svg';
 
+const noPicture = require('../../images/no-picture.jpg');
 export default class GoodInfoCard extends Component {
 	constructor(props) {
 		super(props);
@@ -67,30 +68,14 @@ export default class GoodInfoCard extends Component {
 				<Code codes={goodInfo.codes} />
 				<div className="card item-list">
 					<ul className="ul-list">
-						<Item
-							name="包装生产"
-							itemType="tagItemType"
-							tag="Packed"
-							id="packagingCreationKey"
-							selected={
-								this.state.navigatePage === 'packagingCreationKey' ? true : false
-							}
-							onClick={p => {
-								this.setState({ navigatePage: p });
-							}}
-						/>
-						<Item
-							name="标签生产"
-							itemType="tagItemType"
-							tag="One Tag"
-							id="tagCreationKey"
-							selected={
-								this.state.navigatePage === 'tagCreationKey' ? true : false
-							}
-							onClick={p => {
-								this.setState({ navigatePage: p });
-							}}
-						/>
+						<li className="card-item">
+							<span className="card-item-left">包装生产</span>
+							<span className="card-item-right">Packed&nbsp;></span>
+						</li>
+						<li className="card-item">
+							<span className="card-item-left">标签生产</span>
+							<span className="card-item-right">One tag&nbsp;></span>
+						</li>
 					</ul>
 				</div>
 				<OtherAttributes otherAttributes={goodInfo.otherAttributes} />
@@ -105,14 +90,13 @@ class Picture extends Component {
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
 	}
-
 	handleClick() {
 		console.log('edit this info!');
 	}
 	render() {
 		return (
-			<div className="card">
-				<img  className="good-picture" src={this.props.picture.url} alt="good" />
+			<div className="card clearfix">
+				<img  className="good-picture" src={this.props.picture.url?this.props.picture.url:noPicture} alt="good" />
 				<div className="good-text font-navigation-title1">
 					<span>{this.props.picture.name}</span>
 				</div>
