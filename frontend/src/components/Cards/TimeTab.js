@@ -8,11 +8,11 @@ import './TitleWithTime.css';
 // 	console.log('a')
 // }
 
-let selectTimeTabMy = function(tmpTimeTab){
-	// this.timeTab=tmpTimeTab
-	// console.log('aa')
-	// console.log(this)
-}
+// let selectTimeTabMy = function(tmpTimeTab){
+// 	// this.timeTab=tmpTimeTab
+// 	// console.log('aa')
+// 	// console.log(this)
+// }
 
 // const TimeTab = ({ timeTab, selectTimeTab }) => (
 // 	<div className="title-time-fix">
@@ -68,17 +68,20 @@ let selectTimeTabMy = function(tmpTimeTab){
 const TimeTab = class extends Component {
 	constructor(props) {
 		super(props);
-		console.log('a')
-		console.log(props)
+
 		this.state = {
 			timeTab: props.timeTab || 'week',
 			selectTimeTab:props.selectTimeTab
 		};
 	}
 	selectTimeTabMy(tmptimeTab){
-		this.setState(function(state){
-			return {timeTab:tmptimeTab,selectTimeTab:state.selectTimeTab}
-		})
+		if(tmptimeTab !==this.state.timeTab ) {
+			tips("success",intl.get(tmptimeTab))
+			this.setState(function(state){
+				return {timeTab:tmptimeTab,selectTimeTab:state.selectTimeTab}
+			})
+		}
+
 	}
 	render() {
 		return (
