@@ -4,10 +4,15 @@
 	border-radius: 4px;
 }
 
+.avartar{
+	width: 150px;
+}
+
+
 .customer-text {
 	position: absolute;
 	top: 30px;
-	left: 130px;
+	left: 190px;
 }
 
 .category-left {
@@ -20,8 +25,10 @@
 	left: 350px;
 }
 
+
 .customer-text > span {
 	display: block;
+	margin-bottom: 16px
 }
 
 .edit {
@@ -62,10 +69,10 @@
 
 .customerCategory div.triangle-left {
 	width: 0;
-	height: 0;
-	border-top: 13px solid transparent;
-	border-right: 15px solid #ccc;
-	border-bottom: 13px solid transparent;
+	height: 20px;
+	border-top: 10px solid transparent;
+	border-right: 8px solid #ccc;
+	border-bottom: 10px solid transparent;
 	float: left;
 }
 

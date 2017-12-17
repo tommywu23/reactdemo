@@ -129,10 +129,56 @@ const customerGeneral = class extends Component {
 			activities = activities || this.props.customerActivity;
 			if (customerDetail) {
 				console.log(customerDetail);
+				console.log("customerDetail:",customerDetail);
 				let programmesInfo;
 				let programmes;
 				customerStaffs = customerDetail.staffs;
 				memberCount = customerDetail.staff_count;
+
+				//start cxc tmp
+				let tmpmembers = [
+					{
+						avatarImageUrl: '../../images/salesSunyiming.png',
+						name: '孙志',
+						role: 'BOSS'
+					},
+					{
+						avatarImageUrl: '../../images/salesSunyiming.png',
+						name: '孙志',
+						role: 'BOSS'
+					},
+					{
+						avatarImageUrl: '../../images/salesSunyiming.png',
+						name: '孙志',
+						role: 'BOSS'
+					},
+					{
+						avatarImageUrl: '../../images/salesSunyiming.png',
+						name: '孙志',
+						role: 'BOSS'
+					},
+					{
+						avatarImageUrl: '../../images/salesSunyiming.png',
+						name: '孙志',
+						role: 'BOSS'
+					},
+					{
+						avatarImageUrl: '../../images/salesSunyiming.png',
+						name: '孙志',
+						role: 'BOSS'
+					},
+					{
+						avatarImageUrl: '../../images/salesSunyiming.png',
+						name: '孙志',
+						role: 'BOSS'
+					}
+				];
+				if(customerStaffs.length ===0) {
+					customerStaffs =tmpmembers
+					memberCount = 7
+				}
+				//end cxc tmp
+
 				customer = customerDetail.customer;
 				if (customerDetail.customer) {
 					customerName = stringUtils.cutBySpecifyLength(

@@ -6,6 +6,13 @@ const Item = class extends Component {
 	constructor(props) {
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
+		if (this.props.itemType === 'imgStackItemType') {
+			console.log("=================")
+			console.log("=================")
+			console.log(this.props)
+			console.log("=================")
+		}
+
 	}
 
 	handleClick() {
@@ -63,7 +70,7 @@ const Item = class extends Component {
 					className="right-navigation-box"
 					style={{ color: this.props.selected ? 'white' : '' }}
 				>
-					<div className="stack-imgs">
+					<div className="stack-imgs imgStackItemType-inline-block">
 						{Object.keys(this.props.list).map(
 							key =>
 								key < 6 ? (
@@ -79,7 +86,7 @@ const Item = class extends Component {
 						)}
 					</div>
 					<div
-						className="font-navigation-explain"
+						className="font-navigation-explain imgStackItemType-inline-block"
 						style={{ color: this.props.selected ? 'white' : '' }}
 					>
 						{this.props.count === 0 ? '暂无' : this.props.count + this.props.unit}
@@ -161,11 +168,11 @@ const Item = class extends Component {
 								: '',
 						marginLeft:
 							this.props.selected && this.props.itemType !== 'detailItemType'
-								? '-45px'
+								? '-40px'
 								: '',
 						marginRight:
 							this.props.selected && this.props.itemType !== 'detailItemType'
-								? '75px'
+								? '80px'
 								: ''
 					}}
 				/>

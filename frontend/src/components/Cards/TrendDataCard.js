@@ -7,6 +7,7 @@ import LineChart from '../Charts/LineChart/LineChart';
 import './TrendDataCard.css';
 
 const TrendDataCard = ({ statistic, text, num, up, chartData }) => (
+	// <div className="tab-content">
 	<div className="border-inner statistics">
 		<div className="statistics-left">
 			<div className="text-group">
@@ -36,6 +37,7 @@ const TrendDataCard = ({ statistic, text, num, up, chartData }) => (
 			/>
 		</div>
 	</div>
+	// </div>
 );
 
 export default TrendDataCard;
