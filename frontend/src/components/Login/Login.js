@@ -33,7 +33,7 @@ handleonFocus(e) {
 	// console.log(111123);
   // 这里添加类模块类名 .focus
 
-	$(e.target).css('border-bottom','2px solid #0076ff');
+	// $(e.target).css('border-bottom','2px solid #0076ff');
 }
 
 	handleSubmit(e) {
