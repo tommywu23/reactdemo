@@ -102,9 +102,12 @@
 }
 
 .home-button-link {
-	float: right;
+	position: absolute;
+	right: 60px;
+	top: 20px;
+	/* float: right;
 	margin-top: -45px;
-	margin-right: 60px;
+	margin-right: 60px; */
 }
 
 .search-input {
