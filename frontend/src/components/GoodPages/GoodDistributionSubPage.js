@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './GoodDistributionSubPage.css';
 import ProductGroupCard from '../Cards/ProductGroupCard';
 import GoodCreationRecordCard from '../Cards/GoodCreationRecordCard';
-
+import intl from 'react-intl-universal';
 const groupList = ['上海市海关1号仓库', '上海市中远物流仓库'];
 
 const GoodDistributionSubPage = class extends Component {
@@ -27,7 +27,7 @@ const GoodDistributionSubPage = class extends Component {
 			col:'140'
 		},
 		{
-			name:"总量",
+			name:"总量(只)",
 			col:'100'
 		},
 		// {
@@ -84,7 +84,8 @@ const GoodDistributionSubPage = class extends Component {
 				tAddr: '天津RDC',
 				tDate: '2017年12月11日',
 				tAll: '600',
-				tStatus: '已完成'
+				tStatus: '有问题',
+				tStatusEn:"waring"
 			},
 			{
 				tType: 'CBD',
@@ -92,7 +93,8 @@ const GoodDistributionSubPage = class extends Component {
 				tAddr: '天津RDC',
 				tDate: '2017年12月11日',
 				tAll: '600',
-				tStatus: '已完成'
+				tStatus: '运输中',
+				tStatusEn:"success"
 			},
 			{
 				tType: 'CBD',
@@ -100,7 +102,8 @@ const GoodDistributionSubPage = class extends Component {
 				tAddr: '天津RDC',
 				tDate: '2017年12月11日',
 				tAll: '600',
-				tStatus: '已完成'
+				tStatus: '已完成',
+				tStatusEn:"complete"
 			},
 		];
 		return (
@@ -108,7 +111,26 @@ const GoodDistributionSubPage = class extends Component {
 				<div className="big-size-card">
 					<ProductGroupCard title="物流历史记录" groupList={groupList} />
 				</div>
+				{/* <div className="big-size-card"> */}
+		
+				{/* </div> */}
+
 				<div className="big-size-card">
+				<div className="goodStatistics-select goodStatistics-select-GoodDistributionSubPage">
+					<div className="select-div">
+						<span className="select-text">{intl.get('from')}</span>
+						<select className="select">
+							<option>2016年1月1日</option>
+						</select>
+					{/* </div>
+					<div> */}
+						<span className="select-text">{intl.get('to')}</span>
+						<select className="select">
+							<option>2017年1月1日</option>
+						</select>
+						<span className="query-button">{intl.get('search')}</span>
+					</div>
+				</div>
 					<GoodCreationRecordCard
 						title=""
 						arrowHide="true"
