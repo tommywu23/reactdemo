@@ -192,6 +192,7 @@ input:focus {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 5px;
 }
 
 .search-tips > .history > .item > .item-left > .text {
@@ -203,6 +204,9 @@ input:focus {
 	cursor: pointer;
 }
 
+.item-left svg {
+	vertical-align: middle;
+}
 .text-grey {
 	color: grey;
 }
@@ -227,9 +231,32 @@ input:focus {
 }
 
 
-#warning {width: 240px;position: fixed;right: 0;top: 65px;overflow: hidden;z-index: 5000;color: #19191d;}
-#warning .showBox {width: 240px;height: 53px;margin-bottom: 1px;color: #19191d;position: relative;animation: mymove 0.3s ease;-moz-animation: mymove 0.3s ease;-webkit-animation: mymove 0.3s ease;-o-animation: mymove 0.3s ease;}
-#warning .showBox p {position: absolute;top: 50%;left: 45px;right: 10px;
+
+#warning {width: 300px; min-height: 80px;
+	position: fixed;right: -40px;top: 80px;overflow: hidden;z-index: 5000;color: #19191d;
+	transition: all  0.5s;
+	opacity: 0;
+}
+#warning .showBox {
+	width: 240px;
+	height: 53px;
+	margin-bottom: 1px;
+	color: #19191d;
+	position: relative;
+	border-radius: 5px;
+	/* animation: mymove 0.3s ease;
+	-moz-animation: mymove 0.3s ease;
+	-webkit-animation: mymove 0.3s ease;
+	-o-animation: mymove 0.3s ease; */
+}
+#warning .showBox p {
+	position: absolute;
+	top: 50%;
+	left: 45px;
+	right: 10px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -238,11 +265,17 @@ input:focus {
 }
 .rtBox h3 {font-weight: bold;font-size: 14px;}
 .rtBox p {font-size: 12px;line-height: 16px;}
-.rtBox .warningBox {background: url("../images/pop_error.png") no-repeat;background-size: 100%;}
-.rtBox .successBox {background: url("../images/pop_certain.png") no-repeat;background-size: 100%;}
+/* .rtBox .warningBox {background: url("../images/pop_error.png") no-repeat;background-size: 100%;} */
+.rtBox .warningBox {
+	background: #53a2ff;
+}
+.rtBox .successBox {
+	/* background: url("../images/pop_certain.png") no-repeat;background-size: 100%; */
+	background: #34a853;
+}
 .rtBox .tipsShowBox {background-color: #222226;}
 
-@keyframes mymove{
+/* @keyframes mymove{
     from {
         margin-left: 240px;
         opacity: 0;
@@ -289,4 +322,4 @@ input:focus {
         opacity: 1;
         filter: alpha(opacity=100);
     }
-}
+} */

@@ -15,6 +15,7 @@ const homeBottom1 = require('../../images/homepage-bottom4.png');
 const homeBottom2 = require('../../images/homepage-bottom3.png');
 const homeBottom3 = require('../../images/homepage-bottom2.png');
 const homeBottom4 = require('../../images/homepage-bottom1.png');
+const homeManages = require('../../images/homeManage.png')
 
 const Home = class extends Component {
 	constructor(props) {
@@ -28,6 +29,7 @@ const Home = class extends Component {
 		const customerStatisticsText = intl.get('customer.statistics');
 		const goodStatisticsText = intl.get('good.statistics');
 		const consumerStatisticsText = intl.get('consumer.statistics');
+
 		return (
 			<div className="home">
 				<div className="main-board" ref="mainBoard">
@@ -49,14 +51,6 @@ const Home = class extends Component {
 					<div ref="appClickable" className="main-board-app">
 						<div className='app-box'>
 							<div className="app" align="center">
-								<Link to="/CustomerStatistics" style={{ textDecoration: 'none' }}>
-									<img className="icon" src={customerStatisticsLogo} alt="" />
-									<span className="app-text font-app-title">
-									{customerStatisticsText}
-								</span>
-								</Link>
-							</div>
-							<div className="app" align="center">
 								<Link to="/goodStatistics" style={{ textDecoration: 'none' }}>
 									<img className="icon" src={goodStatisticsLogo} alt="" />
 									<span className="app-text font-app-title">
@@ -64,6 +58,23 @@ const Home = class extends Component {
 								</span>
 								</Link>
 							</div>
+							<div className="app" align="center">
+								<Link to="/goodStatistics" style={{ textDecoration: 'none' }}>
+									<img className="icon" src={homeManages} alt="" />
+									<span className="app-text font-app-title">
+									{goodStatisticsText}
+								</span>
+								</Link>
+							</div>
+							<div className="app" align="center">
+								<Link to="/CustomerStatistics" style={{ textDecoration: 'none' }}>
+									<img className="icon" src={customerStatisticsLogo} alt="" />
+									<span className="app-text font-app-title">
+									{customerStatisticsText}
+								</span>
+								</Link>
+							</div>
+
 							<div className="app" align="center">
 								<Link to="/consumerStatistics" style={{ textDecoration: 'none' }}>
 									<img className="icon" src={consumerStatisticsLogo} alt="" />

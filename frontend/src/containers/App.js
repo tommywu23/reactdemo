@@ -8,7 +8,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import ActionLanguage from 'material-ui/svg-icons/action/language';
 import { Glyphicon, Popover, OverlayTrigger, Button } from 'react-bootstrap';
 import ActionHome from 'material-ui/svg-icons/action/home';
-import ActionDeleteForever from 'material-ui/svg-icons/action/delete';
+// import ActionDeleteForever from 'material-ui/svg-icons/action/delete';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import NavigationExpandLess from 'material-ui/svg-icons/navigation/expand-less';
 import NavigationExpandMore from 'material-ui/svg-icons/navigation/expand-more';
@@ -37,6 +37,9 @@ import { userActions } from '../actions/userAction';
 import { searchActions } from '../actions/searchAction';
 import symbolsLogo from '../images/symbols-logo.png';
 import reactJpg from '../images/avatar.png';
+import sTime from '../images/serchTime.png';
+import searchRemove from '../images/searchRremove.png';
+
 
 let language;
 let searchLinkPrefix = '';
@@ -419,7 +422,7 @@ const App = class extends Component {
 										<div key={key} className="item" ref={'historyItem' + key}>
 											<div className="item-left">
 												<MuiThemeProvider muiTheme={getMuiTheme()}>
-													<DeviceAccessTime />
+													<img src={sTime} />
 												</MuiThemeProvider>
 												<Link
 													to={content.link}
@@ -432,7 +435,7 @@ const App = class extends Component {
 												className="remove"
 												onClick={event => this.deleteOneHistory(content, key)}>
 												<MuiThemeProvider muiTheme={getMuiTheme()}>
-													<ActionDeleteForever />
+													<img src={searchRemove} />
 												</MuiThemeProvider>
 											</div>
 										</div>
@@ -559,6 +562,7 @@ window.resetSearch = function(path) {
 // })
 
 window.tips = function(type, data) {
+	data = '该功能暂未开放 敬请期待';
 	let tip = '';
 	switch (type) {
 		case 'success':
@@ -572,10 +576,12 @@ window.tips = function(type, data) {
 			);
 			break;
 	}
-	$('#warning').append(tip);
+	$('#warning').append(tip).children('.showBox');
+	$('#warning').css('opacity',1);
 	setTimeout(function() {
-		tip.remove();
-	}, 4000);
+			$('#warning').css('opacity',0);
+			tip.remove();
+	}, 2000);
 };
 
 function mapStateToProps(state) {
