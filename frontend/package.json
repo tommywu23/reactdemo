@@ -32,7 +32,7 @@
 	},
 	"homepage": "https://new-design.madeforgoods.com",
 	"env": {
-		"mode": "dev",
+		"mode": "local",
 		"dev": "https://aly-dev.madeforgoods.com:9000/",
 		"local": "http://localhost:8080/"
 	},

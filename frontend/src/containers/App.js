@@ -376,7 +376,7 @@ const App = class extends Component {
 				<Router history={history}>
 					<div className="search-bar" ref="searchBar">
 						<div className="search-left">
-							<Link to="/" title="回到主页">
+							<Link to="/" title="回到主页" >
 								<img height="31" width="195" src={symbolsLogo} alt="mfg" />
 							</Link>
 						</div>
@@ -489,6 +489,7 @@ const App = class extends Component {
 		}
 		return (
 			<div className="screen" ref="screen">
+				<div id="warning" className="rtBox"></div>
 				{header}
 				<MuiThemeProvider muiTheme={getMuiTheme()}>
 					<NavigationExpandMore
@@ -534,6 +535,72 @@ const App = class extends Component {
 		);
 	}
 };
+//
+// function getScrollTop() {
+//         var scrollPos;
+//         if (window.pageYOffset) {
+//         scrollPos = window.pageYOffset; }
+//         else if (document.compatMode && document.compatMode != 'BackCompat')
+//         { scrollPos = document.documentElement.scrollTop; }
+//         else if (document.body) { scrollPos = document.body.scrollTop; }
+//         return scrollPos;
+// }
+
+window.resetSearch = function(path) {
+	if(window.location.pathname !== path) {
+		$('.search-mid').css('marginLeft','420px');
+	} else {
+		$('.search-mid').css('margin','0 auto');
+	}
+}
+
+$(function(){
+	resetSearch('/');
+})
+
+// $(function () {
+    // $('.search-bar').nextAll('div').eq(0).children().css('marginTop','60px')
+    // let h2=document.documentElement.clientHeight?document.documentElement.clientHeight:document.body.clientHeight
+    // let h3=document.documentElement.scrollHeight?document.documentElement.scrollHeight:document.body.scrollHeight;
+    // let bb = document.querySelector('.language-switch');
+    // let tt = document.querySelector('.search-bar');
+    // let scrollHeight = $(document).height();
+    // let windowHeight = $(this).height();
+    // window.onscroll = function() {
+        // let scrollTop = $(window).scrollTop();
+        // if(scrollTop + windowHeight + 60 >= scrollHeight){
+        //     bb.style.display = 'flex';
+        // } else {
+        //     bb.style.display = 'none';
+        // }
+        // if(h1 == 0) {
+        //     tt.style.position = 'relative';
+        //     $('.search-bar').nextAll('div').eq(0).children().css('marginTop','120px')
+        //     // tips('success','112332')
+        // }else if(h1 > 0) {
+        //     tt.style.position = 'fixed';
+        //     $('.search-bar').nextAll('div').eq(0).children().css('marginTop','180px')
+        // }
+    // }
+// })
+
+
+
+  window.tips = function(type, data) {
+    let  tip = "";
+    switch (type) {
+      case "success":
+        tip = $("<div class='successBox clearfix showBox'><p>" + data + "</p></div>");
+        break;
+      case "warning":
+        tip = $("<div class='warningBox clearfix showBox'><p>" + data + "</p></div>");
+        break;
+    }
+    $("#warning").append(tip);
+    setTimeout(function () {
+      tip.remove();
+    }, 4000);
+  };
 
 function mapStateToProps(state) {
 	const { alert } = state;

@@ -11,8 +11,11 @@ const ProductGroupCard = ({ title, groupList }) => (
 		<div className="group">
 			{Object.keys(groupList).map(key => (
 				<div key={key} className="group-border">
-					{groupList[key]}
-					<div className="remove-icon">
+					{groupList[key]} {key}
+					<div className="remove-icon" 
+						onClick={(a,b) => {
+							go(key,groupList)
+						}}>
 						<MuiThemeProvider muiTheme={getMuiTheme()}>
 							<NavigationClose style={{ color: '#2c8efe' }} />
 						</MuiThemeProvider>
@@ -26,4 +29,8 @@ const ProductGroupCard = ({ title, groupList }) => (
 	</div>
 );
 
+function go(a,b) {
+	b.splice(a,1)
+	console.log(b)
+}
 export default ProductGroupCard;
