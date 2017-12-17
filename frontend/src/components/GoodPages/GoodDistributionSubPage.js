@@ -8,7 +8,42 @@ const groupList = ['上海市海关1号仓库', '上海市中远物流仓库'];
 
 const GoodDistributionSubPage = class extends Component {
 	render() {
-		let tableHeader = ['货物情况', '用户', '创建时间', '订单号', '送达地址', '货物总数', '扫描总数', '状态'];
+		// let tableHeader = ['货物情况', '用户', '创建时间', '订单号', '送达地址', '货物总数', '扫描总数', '状态'];
+		let tableHeader = [
+			{
+			name:"货物情况",
+			col:'110'
+		},
+		{
+			name:"用户",
+			col:'100'
+		},
+		{
+			name:"创建时间",
+			col:'110'
+		},
+		{
+			name:"订单号",
+			col:'140'
+		},
+		{
+			name:"送达地址",
+			col:'340'
+		},
+		{
+			name:"货物总数",
+			col:'110'
+		},
+		{
+			name:"扫描总数",
+			col:'110'
+		},
+		{
+			name:"状态",
+			col:'90'
+		},
+		
+		];
 		let tableData = [
 			{
 				yield: '发货9',
