@@ -11,7 +11,8 @@ import ConsumerStatisticsHulkSubPage from './ConsumerStatisticsHulkSubPage';
 
 import consumerStatisticsLogo from '../../images/consumer-statistics-icon.png';
 import goodHistoryPic from '../../images/good-history.svg';
-import hulkSvg from '../../images/Hulk.svg';
+import HulkSvgGray from '../../images/grayHulk.svg';
+import HulkSvgWhite from '../../images/whiteHulk.svg';
 
 const ConsumerStatistics = class extends Component {
 	constructor(props) {
@@ -40,9 +41,7 @@ const ConsumerStatistics = class extends Component {
 							id="lastConsumer"
 							count="6,2470"
 							icon={goodHistoryPic}
-							selected={
-								this.state.navigatePage === 'lastConsumer' ? true : false
-							}
+							selected={this.state.navigatePage === 'lastConsumer' ? true : false}
 							name="最新数据"
 							onClick={p => {
 								this.setState({ navigatePage: p });
@@ -54,11 +53,10 @@ const ConsumerStatistics = class extends Component {
 							name="Hulk"
 							id="consumerStatisticsHulk"
 							selected={
-								this.state.navigatePage === 'consumerStatisticsHulk'
-									? true
-									: false
+								this.state.navigatePage === 'consumerStatisticsHulk' ? true : false
 							}
-							icon={hulkSvg}
+							icon={HulkSvgGray}
+							grayIcon={HulkSvgWhite}
 							onClick={p => {
 								this.setState({ navigatePage: p });
 							}}

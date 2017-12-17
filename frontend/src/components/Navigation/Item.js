@@ -7,12 +7,11 @@ const Item = class extends Component {
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
 		if (this.props.itemType === 'imgStackItemType') {
-			console.log("=================")
-			console.log("=================")
-			console.log(this.props)
-			console.log("=================")
+			console.log('=================');
+			console.log('=================');
+			console.log(this.props);
+			console.log('=================');
 		}
-
 	}
 
 	handleClick() {
@@ -24,42 +23,21 @@ const Item = class extends Component {
 		var el = {};
 		var ed = {};
 		if (this.props.itemType === 'detailItemType') {
-			ed = (
-				<i
-					className="icon icon-arrow-m icon-right icon-right-m"
-					style={{
-						filter: this.props.selected ? 'drop-shadow(#FFFFFF -60px 0)' : '',
-						WebkitFilter: this.props.selected
-							? 'drop-shadow(#FFFFFF -60px 0)'
-							: '',
-						marginRight: this.props.selected ? '-60px' : ''
-					}}
-				/>
-			);
+			ed = <i className="icon icon-arrow-m icon-right icon-right-m" />;
 		} else {
-			ed = (
-				<i
-					className="icon icon-arrow icon-right icon-right-m"
-					style={{
-						filter: this.props.selected ? 'drop-shadow(#FFFFFF -60px 0)' : '',
-						marginRight: this.props.selected ? '-60px' : ''
-					}}
-				/>
-			);
+			ed = <i className="icon icon-arrow icon-right icon-right-m" />;
 		}
 		if (this.props.itemType === 'detailItemType') {
 			el = (
 				<dl>
 					<dt
 						className="font-detail-title1"
-						style={{ color: this.props.selected ? 'white' : '' }}
-					>
+						style={{ color: this.props.selected ? 'white' : '' }}>
 						{this.props.locationName}
 					</dt>
 					<dd
 						className="font-navigation-title2"
-						style={{ color: this.props.selected ? 'white' : '' }}
-					>
+						style={{ color: this.props.selected ? 'white' : '' }}>
 						{this.props.text}
 					</dd>
 				</dl>
@@ -68,8 +46,7 @@ const Item = class extends Component {
 			el = (
 				<div
 					className="right-navigation-box"
-					style={{ color: this.props.selected ? 'white' : '' }}
-				>
+					style={{ color: this.props.selected ? 'white' : '' }}>
 					{/* <div className="stack-imgs imgStackItemType-inline-block">
 						{Object.keys(this.props.list).map(
 							key =>
@@ -87,8 +64,7 @@ const Item = class extends Component {
 					</div> */}
 					<div
 						className="font-navigation-explain imgStackItemType-inline-block"
-						style={{ color: this.props.selected ? 'white' : '' }}
-					>
+						style={{ color: this.props.selected ? 'white' : '' }}>
 						{this.props.count === 0 ? '暂无' : this.props.count + this.props.unit}
 					</div>
 				</div>
@@ -97,8 +73,7 @@ const Item = class extends Component {
 			el = (
 				<div
 					className="right-navigation-box font-navigation-explain"
-					style={{ color: this.props.selected ? 'white' : '' }}
-				>
+					style={{ color: this.props.selected ? 'white' : '' }}>
 					{Object.keys(this.props.list).map(key => (
 						<img
 							key={key.toString()}
@@ -112,8 +87,7 @@ const Item = class extends Component {
 			el = (
 				<div
 					className="right-navigation-box font-navigation-explain"
-					style={{ color: this.props.selected ? 'white' : '' }}
-				>
+					style={{ color: this.props.selected ? 'white' : '' }}>
 					{this.props.warn !== undefined ? (
 						<img src={this.props.warn} alt={this.props.warn} />
 					) : null}
@@ -124,8 +98,7 @@ const Item = class extends Component {
 			el = (
 				<div
 					className="right-navigation-box font-navigation-explain"
-					style={{ color: this.props.selected ? 'white' : '' }}
-				>
+					style={{ color: this.props.selected ? 'white' : '' }}>
 					<i className="icon icon-search" />
 					{this.props.count}
 					{this.props.unit}
@@ -135,8 +108,7 @@ const Item = class extends Component {
 			el = (
 				<div
 					className="right-navigation-box font-navigation-explain"
-					style={{ color: this.props.selected ? 'white' : '' }}
-				>
+					style={{ color: this.props.selected ? 'white' : '' }}>
 					{this.props.count}
 					{this.props.unit}
 				</div>
@@ -151,35 +123,25 @@ const Item = class extends Component {
 				style={{
 					backgroundColor: this.props.selected ? '#56a4fc' : '',
 					color: this.props.selected ? 'white' : ''
-				}}
-			>
+				}}>
 				<img
 					className="icon-front"
-					src={this.props.icon}
-					alt={this.props.icon}
+					src={
+						this.props.selected && this.props.itemType !== 'detailItemType'
+							? this.props.grayIcon
+							: this.props.icon
+					}
+					alt="icon"
 					style={{
-						filter:
+						backgroundColor:
 							this.props.selected && this.props.itemType !== 'detailItemType'
-								? 'drop-shadow(#FFFFFF 60px 0)'
-								: '',
-						WebkitFilter:
-							this.props.selected && this.props.itemType !== 'detailItemType'
-								? 'drop-shadow(#FFFFFF 60px 0)'
-								: '',
-						marginLeft:
-							this.props.selected && this.props.itemType !== 'detailItemType'
-								? '-40px'
-								: '',
-						marginRight:
-							this.props.selected && this.props.itemType !== 'detailItemType'
-								? '80px'
-								: ''
+								? '#53A2FF'
+								: 'white'
 					}}
 				/>
 				<span
 					className="font-navigation-title2"
-					style={{ color: this.props.selected ? 'white' : '' }}
-				>
+					style={{ color: this.props.selected ? 'white' : '' }}>
 					{this.props.name}
 				</span>
 				{el}

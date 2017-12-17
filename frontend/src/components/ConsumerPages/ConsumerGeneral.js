@@ -8,7 +8,8 @@ import ConsumerHulkSubPage from './ConsumerHulkSubPage';
 
 import consumerStatisticsLogo from '../../images/consumer-statistics-icon.png';
 import goodHistoryPic from '../../images/good-history.svg';
-import hulkSvg from '../../images/Hulk.svg';
+import HulkSvgGray from '../../images/grayHulk.svg';
+import HulkSvgWhite from '../../images/whiteHulk.svg';
 
 const ConsumerGeneral = class extends Component {
 	constructor(props) {
@@ -34,9 +35,7 @@ const ConsumerGeneral = class extends Component {
 							itemType="detailItemType"
 							className="place-item"
 							icon={consumerStatisticsLogo}
-							selected={
-								this.state.navigatePage === 'consumerDetail' ? true : false
-							}
+							selected={this.state.navigatePage === 'consumerDetail' ? true : false}
 							locationName="Jared Mullins"
 							text="GWOODS"
 							onClick={p => {
@@ -49,10 +48,9 @@ const ConsumerGeneral = class extends Component {
 							name="Hulk"
 							id="consumerHulk"
 							count="9,201"
-							selected={
-								this.state.navigatePage === 'consumerHulk' ? true : false
-							}
-							icon={hulkSvg}
+							selected={this.state.navigatePage === 'consumerHulk' ? true : false}
+							icon={HulkSvgGray}
+							grayIcon={HulkSvgWhite}
 							onClick={p => {
 								this.setState({ navigatePage: p });
 							}}

@@ -24,7 +24,8 @@ import consumption from '../../images/consumption.svg';
 import sesameActivity from '../../images/sesame-activity.svg';
 import coActivity from '../../images/co-activity.svg';
 import allCustomerSvg from '../../images/all-customer.svg';
-import hulkSvg from '../../images/Hulk.svg';
+import HulkSvgGray from '../../images/grayHulk.svg';
+import HulkSvgWhite from '../../images/whiteHulk.svg';
 
 const customerStatistics = class extends Component {
 	constructor(props) {
@@ -71,9 +72,7 @@ const customerStatistics = class extends Component {
 							id="addCustomerKey"
 							count="12,302"
 							icon={allCustomerSvg}
-							selected={
-								this.state.navigatePage === 'addCustomerKey' ? true : false
-							}
+							selected={this.state.navigatePage === 'addCustomerKey' ? true : false}
 							onClick={p => {
 								this.setState({ navigatePage: p });
 							}}
@@ -111,11 +110,10 @@ const customerStatistics = class extends Component {
 							id="sesameActivityKeyLHLH"
 							count="7,437"
 							selected={
-								this.state.navigatePage === 'sesameActivityKeyLHLH'
-									? true
-									: false
+								this.state.navigatePage === 'sesameActivityKeyLHLH' ? true : false
 							}
-							icon={hulkSvg}
+							icon={HulkSvgGray}
+							grayIcon={HulkSvgWhite}
 							onClick={p => {
 								this.setState({ navigatePage: p });
 							}}
@@ -126,9 +124,7 @@ const customerStatistics = class extends Component {
 							// count={mapCountCalculate(goodConsumptionMap)}
 							id="sesameActivityKey"
 							icon={sesameActivity}
-							selected={
-								this.state.navigatePage === 'sesameActivityKey' ? true : false
-							}
+							selected={this.state.navigatePage === 'sesameActivityKey' ? true : false}
 							onClick={p => {
 								this.setState({ navigatePage: p });
 							}}

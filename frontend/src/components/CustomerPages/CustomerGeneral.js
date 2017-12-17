@@ -30,7 +30,8 @@ import v1 from '../../images/v1.svg';
 import v2 from '../../images/v2.svg';
 import v3 from '../../images/v3.svg';
 import warning from '../../images/warning.svg';
-import HulkSvg from '../../images/Hulk.svg';
+import HulkSvgGray from '../../images/grayHulk.svg';
+import HulkSvgWhite from '../../images/whiteHulk.svg';
 import goodFeelingSvg from '../../images/good-feeling.svg';
 import customerListSvg from '../../images/customer-list.svg';
 
@@ -129,7 +130,7 @@ const customerGeneral = class extends Component {
 			activities = activities || this.props.customerActivity;
 			if (customerDetail) {
 				console.log(customerDetail);
-				console.log("customerDetail:",customerDetail);
+				console.log('customerDetail:', customerDetail);
 				let programmesInfo;
 				let programmes;
 				customerStaffs = customerDetail.staffs;
@@ -173,9 +174,9 @@ const customerGeneral = class extends Component {
 						role: 'BOSS'
 					}
 				];
-				if(customerStaffs.length ===0) {
-					customerStaffs =tmpmembers
-					memberCount = 7
+				if (customerStaffs.length === 0) {
+					customerStaffs = tmpmembers;
+					memberCount = 7;
 				}
 				//end cxc tmp
 
@@ -210,8 +211,7 @@ const customerGeneral = class extends Component {
 					<div
 						onClick={event => {
 							this.navigateBack(event);
-						}}
-					>
+						}}>
 						<Header
 							titleName="客户概况"
 							linkName="返回客户统计"
@@ -225,9 +225,7 @@ const customerGeneral = class extends Component {
 							itemType="detailItemType"
 							className="place-item"
 							icon={defaultCustomer}
-							selected={
-								this.state.navigatePage === 'customerKey' ? true : false
-							}
+							selected={this.state.navigatePage === 'customerKey' ? true : false}
 							locationName={customerName}
 							text={customerId + '   ' + customerType}
 							onClick={p => {
@@ -305,9 +303,7 @@ const customerGeneral = class extends Component {
 							count="7480"
 							unit="积分"
 							id="CuanhuoKeyLHLH"
-							selected={
-								this.state.navigatePage === 'CuanhuoKeyLHLH' ? true : false
-							}
+							selected={this.state.navigatePage === 'CuanhuoKeyLHLH' ? true : false}
 							icon={goodFeelingSvg}
 							onClick={p => {
 								this.setState({ navigatePage: p });
@@ -318,9 +314,7 @@ const customerGeneral = class extends Component {
 							count="7480"
 							unit="积分"
 							id="customerListPage"
-							selected={
-								this.state.navigatePage === 'customerListPage' ? true : false
-							}
+							selected={this.state.navigatePage === 'customerListPage' ? true : false}
 							icon={customerListSvg}
 							onClick={p => {
 								this.setState({ navigatePage: p });
@@ -356,11 +350,10 @@ const customerGeneral = class extends Component {
 							unit="积分"
 							id="sesameActivityKeyLHLH"
 							selected={
-								this.state.navigatePage === 'sesameActivityKeyLHLH'
-									? true
-									: false
+								this.state.navigatePage === 'sesameActivityKeyLHLH' ? true : false
 							}
-							icon={HulkSvg}
+							icon={HulkSvgGray}
+							grayIcon={HulkSvgWhite}
 							onClick={p => {
 								this.setState({ navigatePage: p });
 							}}
