@@ -1,199 +1,276 @@
 html {
-	overflow: scroll;
-	overflow-x: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.clearfix:before,.clearfix:after {
+ 	content: "";
+	display: block;
+	clear: both;
+}
+.clearfix {
+    zoom: 1;
 }
 ::-webkit-scrollbar {
-	width: 0px; /* remove scrollbar space */
-	background: transparent; /* optional: just make scrollbar invisible */
+    width: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
 }
+
+
 /* optional: show position indicator in red */
+
 ::-webkit-scrollbar-thumb {
-	background: transparent;
+    background: transparent;
 }
 
 body {
-	background-color: #efeff6;
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	margin: 0;
-	position: absolute;
-	font-family: 'Roboto', arial, Helvetica, sans-serif;
+    /*background-color: #efeff6;*/
+    background: #fff;
+    width: 100%;
+    height: 900px;
+    padding: 0;
+    margin: 0;
+    /*position: absolute;*/
+    /*font-family: '', arial, Helvetica, sans-serif;*/
+    font-family:'Roboto',"Microsoft YaHei", Sans-serif;
+	overflow: hidden;
 }
+
 div {
-	position: relative;
+    position: relative;
 }
+
 ul {
-	padding: 0;
+    padding: 0;
 }
+
 li {
-	list-style: none;
+    list-style: none;
 }
+
 dd {
-	margin-left: 0;
+    margin-left: 0;
 }
 
 .home {
-	height: 100%;
+    height: 100%;
+  margin-top: 240px;
+
 }
 
 .font-login-title {
-	font-size: 24px;
-	color: #000000;
+    font-size: 24px;
+    color: #000000;
 }
 
 .font-login-explain {
-	font-size: 16px;
-	color: #a8a8a8;
+    font-size: 16px;
+    color: #a8a8a8;
 }
 
 .font-app-title {
-	font-size: 16px;
-	color: #737373;
+    font-size: 16px;
+    color: #737373;
 }
 
 .font-navigation-title1 {
-	font-size: 30px;
-	color: #000000;
+    font-size: 30px;
+    color: #000000;
 }
 
 .font-detail-title1 {
-	font-size: 20px;
-	color: #4a4a4a;
+    font-size: 20px;
+    color: #4a4a4a;
 }
 
 .font-navigation-title2 {
-	font-size: 14px;
-	color: #4a4a4a;
+    font-size: 14px;
+    color: #4a4a4a;
 }
 
 .font-navigation-explain {
-	font-size: 14px;
-	color: #9b9b9b;
+    font-size: 14px;
+    color: #9b9b9b;
 }
 
 .font-content-title {
-	font-size: 14px;
-	color: #000000;
+    font-size: 14px;
+    color: #000000;
 }
 
 .font-content-strong {
-	font-size: 16px;
-	color: #000000;
-	font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
 }
 
 .font-content {
-	font-size: 16px;
-	color: #000000;
+    font-size: 16px;
+    color: #000000;
 }
 
 .font-content-link {
-	font-size: 16px;
-	color: #0076ff;
+    font-size: 16px;
+    color: #0076ff;
 }
 
 .container {
-	padding: 0;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
+    padding: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    /*height: 100%;*/
 }
 
 .icon {
-	background-size: cover;
+    background-size: cover;
 }
 
 .layout {
-	position: relative;
-	left: 0;
-	width: 100%;
-	height: inherit;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: inherit;
 }
 
 .navigation {
-	position: absolute;
-	width: 401px;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	border-right: 1px solid #bcbcbc;
-	overflow-y: auto;
+    position: absolute;
+    width: 401px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #bcbcbc;
+    overflow-y: auto;
 }
 
 .navigation ul.navigation-medium {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .navigation ul.navigation-top {
-	margin: 40px 0;
+    margin: 40px 0;
 }
 
 .navigation ul.navigation-small {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .navigation ul.navigation-list li {
-	display: inline-block;
-	height: 40px;
-	line-height: 42px;
-	background-color: #fff;
-	width: 100%;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	position: relative;
-	cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 42px;
+    background-color: #fff;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    cursor: pointer;
 }
 
 .navigation ul.navigation-list li:hover {
-	background-color: #ebebeb;
+    background-color: #ebebeb;
 }
 
 .main {
-	position: absolute;
-	left: 400px;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	overflow-y: auto;
+    position: absolute;
+    left: 400px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+
 }
 
 .page {
-	margin: 20px 20px 0 20px;
+    margin: 20px 20px 0 20px;
 }
 
 .main-board {
-	height: 90%;
-	padding: 50px;
+    height: 90%;
+    /*padding: 50px;*/
+
 }
 
 .main-board-app {
-	margin-left: 400px;
+    width: 100%;
+    margin: 0 auto;
+	/*margin-top: 60px;*/
+	/*width: 700px;*/
+    /*display: flex;*/
+	  padding: 0 400px 0;
+    /*flex-wrap: wrap;*/
+    /*align-content: justify-content;*/
+    /*justify-content: space-around;*/
+    border-bottom: 1px solid #D2D2D2;
+}
+.main-board-app .app-box {
+    width: 700px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.main-board-bottom  .main-board-box {
 	width: 700px;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-start;
+	/*height: 300px;*/
+	/*background: red;*/
+	margin: 0 auto;
+	padding-top: 60px;
 }
-
+.normal-head {
+	/*color: #959595;*/
+	line-height: 25px;
+	/*font-size: 14px;*/
+}
+.main-board-box .normal {
+	float: left;
+	width: 160px;
+	height: 130px;
+	margin-right: 20px;
+    /*transition: all 0.5s;*/
+}
+.normal:hover {
+    /*box-shadow: 10px 10px 5px #888888;*/
+}
+.normal img {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+    cursor: pointer;
+}
+.normal span {
+	color: #4CA0FF;
+    padding-left: 5px;
+    /*font-size: 14px;*/
+}
+.main-board-box .normal:last-child {
+	margin-right: 0;
+}
 .app {
-	width: 165px;
-	height: 165px;
-	margin-right: 50px;
+    width: 165px;
+    display: inline-block;
+    /*height: 165px;*/
+    /*height: 140px;*/
+    margin-right: 50px;
+	margin-bottom: 40px;
 }
-
+.app:last-child {
+    margin-right: 0;
+}
 .app img.icon {
-	width: 80px;
-	height: 80px;
+    width: 70px;
+    height: 70px;
 }
 
 .app span.app-text {
-	margin-top: 5px;
-	display: block;
-	color: #337ab7;
+    margin-top: 5px;
+    display: block;
+    font-size: 16px;
+    /*color: #337ab7;*/
+    /*color: #D2D2D2;*/
+    color: #959595;
 }
 
 .subpage {
-	display: none;
+    display: none;
 }
