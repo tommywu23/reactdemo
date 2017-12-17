@@ -3,6 +3,32 @@
 	padding: 20px;
 }
 
+.title-time-fix {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 700px;
+	margin-left: -20px;
+}
+
+.title-time-fix .nav-tabs>li {
+    float: left;
+    margin-bottom: -4px;
+    margin-left: 95px;
+}
+
+.title-time-fix a {
+	color: rgb(85, 85, 85);
+	border: none;
+}
+
+
+.title-time-fix .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus,.title-time-fix .nav-tabs>li.active>a:hover {
+    color: #555;
+	cursor: default;
+	border: none;
+	border-bottom: 4px solid black;
+}
+
 .buttom-border {
 	border-bottom: 1px solid #d6d6d6;
 	margin-bottom: 20px;

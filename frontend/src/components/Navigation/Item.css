@@ -10,6 +10,13 @@
 .navigation ul.navigation-list li .stack-imgs {
 	margin-right: 35px;
 }
+
+/* start cxc tmp */
+.imgStackItemType-inline-block {
+	display: inline-block
+}
+/* end cxc tmp */
+
 .navigation ul.navigation-list li .right-navigation-box img {
 	width: 40px;
 	height: 40px;
@@ -40,7 +47,7 @@
 .navigation ul.navigation-list li img.icon-front {
 	width: 40px;
 	height: 40px;
-	margin: 0px 15px 0px 15px;
+	margin: 0px 20px 0px 20px;
 	float: left;
 }
 .navigation ul.navigation-list li i.icon-right-m {
