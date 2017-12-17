@@ -14,7 +14,9 @@ const LastDataSubPage = ({ goodMasters }) => (
 	<div className="page">
 		<div className="card">
 			<ProductGroupCard title="" groupList={groupList} />
-			<TimeTab timeTab="week" />
+			<TimeTab 
+				timeTab="week" 
+			 />
 			<TrendDataCard
 				num="62,470"
 				up="5"

@@ -34,7 +34,7 @@
 	"env": {
 		"mode": "local",
 		"dev": "https://aly-dev.madeforgoods.com:9000/",
-		"local": "http://localhost:8080/"
+		"local": "http://192.168.108.58:8080/"
 	},
 	"devDependencies": {
 		"webpack": "^3.10.0",
