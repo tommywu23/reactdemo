@@ -7,12 +7,18 @@ function GoodCreationRecordCard(props) {
 	const fontColor = props.highlight == undefined ? "#000000": props.highlight;
 	
 	let data = tableData.map( (value, index) => {
-		return <tr key={index.toString()}>
+		let styles = {
+			waring:'table-waring font-content',
+			success:'font-content',
+			complete:'table-complete font-content'
+		}
+		console.log(value["tStatusEn"])
+		return <tr className={styles[value["tStatusEn"]]} key={index.toString()}>
 				 {Object.keys(value).map( key =>{
-					return (<td key={key}>{value[key]}</td>)
+					// return (<td key={key}>{value[key]}</td>)
 					switch(key) {
-						case 'yield':{
-							return (<td key={key}>{value[key]}</td>);
+						case 'tStatusEn':{
+							return '';
 						}
 						default :return (<td key={key}>{value[key]}</td>)
 					}

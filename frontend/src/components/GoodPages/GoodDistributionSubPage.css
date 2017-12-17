@@ -1,6 +1,18 @@
 .big-size-card {
   background-color: #fff;
 	padding: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	width: 1000px;
+}
+
+.goodStatistics-select-GoodDistributionSubPage {
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-top: 20px;
+	padding-bottom: 9px;
+	border-bottom: 1px solid #ddd;
+}
+
+.table-font .record{
+	margin-top:0px;
 }
