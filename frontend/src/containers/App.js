@@ -290,8 +290,7 @@ const App = class extends Component {
 			<Popover
 				id="popover-trigger-click-root-close"
 				title={switchLanguageText}
-				ref="languageOverlay"
-			>
+				ref="languageOverlay">
 				<div className="language-overlay">
 					<Button onClick={event => this.languageClick(event, 'zh')}>
 						<span>{intl.get('chinese')} </span>
@@ -312,9 +311,7 @@ const App = class extends Component {
 				item.name = item.name.substring(0, 40) + '...';
 			}
 		});
-		const user = localStorage.getItem('user')
-			? localStorage.getItem('user')
-			: '';
+		const user = localStorage.getItem('user') ? localStorage.getItem('user') : '';
 		const popoverBottom = (
 			<Popover id="popover-trigger-click-root-close" title={user}>
 				<div className="popover-user">
@@ -364,8 +361,7 @@ const App = class extends Component {
 								trigger="click"
 								rootClose
 								placement="top"
-								overlay={switchLanguage}
-							>
+								overlay={switchLanguage}>
 								<ActionLanguage style={{ cursor: 'pointer', color: 'white' }} />
 							</OverlayTrigger>
 						</MuiThemeProvider>
@@ -376,7 +372,7 @@ const App = class extends Component {
 				<Router history={history}>
 					<div className="search-bar" ref="searchBar">
 						<div className="search-left">
-							<Link to="/" title="回到主页" >
+							<Link to="/" title="回到主页">
 								<img height="31" width="195" src={symbolsLogo} alt="mfg" />
 							</Link>
 						</div>
@@ -397,8 +393,7 @@ const App = class extends Component {
 								className="home-remove-icon"
 								ref="removeIcon"
 								style={{ display: 'none' }}
-								onClick={event => this.hideSearchTips(event)}
-							>
+								onClick={event => this.hideSearchTips(event)}>
 								<MuiThemeProvider muiTheme={getMuiTheme()}>
 									<NavigationClose />
 								</MuiThemeProvider>
@@ -406,24 +401,20 @@ const App = class extends Component {
 							<div
 								className="search-tips"
 								ref="searchTips"
-								style={{ display: 'none' }}
-							>
+								style={{ display: 'none' }}>
 								<div className="scope">
 									<span className="tip-text text-grey">{searchScopeText}</span>
 									{searchScope.map((tip, key) => (
 										<div
 											key={key}
 											className="border"
-											onClick={event => this.selectScope(event, tip)}
-										>
+											onClick={event => this.selectScope(event, tip)}>
 											{tip}
 										</div>
 									))}
 								</div>
 								<div className="history">
-									<span className="tip-text text-grey">
-										{searchHistoryText}
-									</span>
+									<span className="tip-text text-grey">{searchHistoryText}</span>
 									{historyContent.map((content, key) => (
 										<div key={key} className="item" ref={'historyItem' + key}>
 											<div className="item-left">
@@ -433,15 +424,13 @@ const App = class extends Component {
 												<Link
 													to={content.link}
 													className="text"
-													onClick={event => this.hideSearchTips(event)}
-												>
+													onClick={event => this.hideSearchTips(event)}>
 													{content.name}
 												</Link>
 											</div>
 											<div
 												className="remove"
-												onClick={event => this.deleteOneHistory(content, key)}
-											>
+												onClick={event => this.deleteOneHistory(content, key)}>
 												<MuiThemeProvider muiTheme={getMuiTheme()}>
 													<ActionDeleteForever />
 												</MuiThemeProvider>
@@ -471,8 +460,7 @@ const App = class extends Component {
 								trigger="click"
 								rootClose
 								placement="bottom"
-								overlay={popoverBottom}
-							>
+								overlay={popoverBottom}>
 								<img
 									height="42"
 									width="42"
@@ -489,7 +477,7 @@ const App = class extends Component {
 		}
 		return (
 			<div className="screen" ref="screen">
-				<div id="warning" className="rtBox"></div>
+				<div id="warning" className="rtBox" />
 				{header}
 				<MuiThemeProvider muiTheme={getMuiTheme()}>
 					<NavigationExpandMore
@@ -506,25 +494,15 @@ const App = class extends Component {
 				<div
 					ref="content"
 					style={{ width: '100%', height: loginHeight ? loginHeight : '850px' }}
-					onClick={event => this.hideSearchTips(event)}
-				>
+					onClick={event => this.hideSearchTips(event)}>
 					<Router history={history}>
 						<Switch>
 							<MfgRoute exact path="/" component={Home} />
-							<MfgRoute
-								path="/customerGeneral/:id"
-								component={CustomerGeneral}
-							/>
-							<MfgRoute
-								path="/customerStatistics"
-								component={CustomerStatistics}
-							/>
+							<MfgRoute path="/customerGeneral/:id" component={CustomerGeneral} />
+							<MfgRoute path="/customerStatistics" component={CustomerStatistics} />
 							<MfgRoute path="/goodStatistics" component={GoodStatistics} />
 							<MfgRoute path="/goodGeneral/:code" component={GoodGeneral} />
-							<MfgRoute
-								path="/consumerStatistics"
-								component={ConsumerStatistics}
-							/>
+							<MfgRoute path="/consumerStatistics" component={ConsumerStatistics} />
 							<MfgRoute path="/consumerGeneral" component={ConsumerGeneral} />
 							<Route path="/login" component={Login} />
 						</Switch>
@@ -547,65 +525,64 @@ const App = class extends Component {
 // }
 
 window.resetSearch = function(path) {
-	if(window.location.pathname !== path) {
-		$('.search-mid').css('marginLeft','420px');
+	if (window.location.pathname !== path) {
+		$('.search-mid').css('marginLeft', '400px');
 	} else {
-		$('.search-mid').css('margin','0 auto');
+		$('.search-mid').css('margin', '0 auto');
 	}
-}
-
-$(function(){
-	resetSearch('/');
-})
+};
 
 // $(function () {
-    // $('.search-bar').nextAll('div').eq(0).children().css('marginTop','60px')
-    // let h2=document.documentElement.clientHeight?document.documentElement.clientHeight:document.body.clientHeight
-    // let h3=document.documentElement.scrollHeight?document.documentElement.scrollHeight:document.body.scrollHeight;
-    // let bb = document.querySelector('.language-switch');
-    // let tt = document.querySelector('.search-bar');
-    // let scrollHeight = $(document).height();
-    // let windowHeight = $(this).height();
-    // window.onscroll = function() {
-        // let scrollTop = $(window).scrollTop();
-        // if(scrollTop + windowHeight + 60 >= scrollHeight){
-        //     bb.style.display = 'flex';
-        // } else {
-        //     bb.style.display = 'none';
-        // }
-        // if(h1 == 0) {
-        //     tt.style.position = 'relative';
-        //     $('.search-bar').nextAll('div').eq(0).children().css('marginTop','120px')
-        //     // tips('success','112332')
-        // }else if(h1 > 0) {
-        //     tt.style.position = 'fixed';
-        //     $('.search-bar').nextAll('div').eq(0).children().css('marginTop','180px')
-        // }
-    // }
+// $('.search-bar').nextAll('div').eq(0).children().css('marginTop','60px')
+// let h2=document.documentElement.clientHeight?document.documentElement.clientHeight:document.body.clientHeight
+// let h3=document.documentElement.scrollHeight?document.documentElement.scrollHeight:document.body.scrollHeight;
+// let bb = document.querySelector('.language-switch');
+// let tt = document.querySelector('.search-bar');
+// let scrollHeight = $(document).height();
+// let windowHeight = $(this).height();
+// window.onscroll = function() {
+// let scrollTop = $(window).scrollTop();
+// if(scrollTop + windowHeight + 60 >= scrollHeight){
+//     bb.style.display = 'flex';
+// } else {
+//     bb.style.display = 'none';
+// }
+// if(h1 == 0) {
+//     tt.style.position = 'relative';
+//     $('.search-bar').nextAll('div').eq(0).children().css('marginTop','120px')
+//     // tips('success','112332')
+// }else if(h1 > 0) {
+//     tt.style.position = 'fixed';
+//     $('.search-bar').nextAll('div').eq(0).children().css('marginTop','180px')
+// }
+// }
 // })
 
-
-
-  window.tips = function(type, data) {
-    let  tip = "";
-    switch (type) {
-      case "success":
-        tip = $("<div class='successBox clearfix showBox'><p>" + data + "</p></div>");
-        break;
-      case "warning":
-        tip = $("<div class='warningBox clearfix showBox'><p>" + data + "</p></div>");
-        break;
-    }
-    $("#warning").append(tip);
-    setTimeout(function () {
-      tip.remove();
-    }, 4000);
-  };
+window.tips = function(type, data) {
+	let tip = '';
+	switch (type) {
+		case 'success':
+			tip = $(
+				"<div class='successBox clearfix showBox'><p>" + data + '</p></div>'
+			);
+			break;
+		case 'warning':
+			tip = $(
+				"<div class='warningBox clearfix showBox'><p>" + data + '</p></div>'
+			);
+			break;
+	}
+	$('#warning').append(tip);
+	setTimeout(function() {
+		tip.remove();
+	}, 4000);
+};
 
 function mapStateToProps(state) {
 	const { alert } = state;
 	const { lang, userInfo } = state.authentication;
 	const { searchHistory } = state.searchReducer;
+	resetSearch('/');
 	return {
 		alert,
 		lang,
