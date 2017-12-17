@@ -8,11 +8,11 @@ import './TitleWithTime.css';
 // 	console.log('a')
 // }
 
-let selectTimeTabMy = function(tmpTimeTab){
-	// this.timeTab=tmpTimeTab
-	// console.log('aa')
-	// console.log(this)
-}
+// let selectTimeTabMy = function(tmpTimeTab){
+// 	// this.timeTab=tmpTimeTab
+// 	// console.log('aa')
+// 	// console.log(this)
+// }
 
 // const TimeTab = ({ timeTab, selectTimeTab }) => (
 // 	<div className="title-time-fix">
@@ -68,24 +68,30 @@ let selectTimeTabMy = function(tmpTimeTab){
 const TimeTab = class extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			timeTab: props.timeTab || 'week',
 			selectTimeTab:props.selectTimeTab
 		};
 	}
 	selectTimeTabMy(tmptimeTab){
-		// console.log('a')
-		this.state.timeTab = tmptimeTab
+		if(tmptimeTab !==this.state.timeTab ) {
+			tips("success",intl.get(tmptimeTab))
+			this.setState(function(state){
+				return {timeTab:tmptimeTab,selectTimeTab:state.selectTimeTab}
+			})
+		}
+
 	}
 	render() {
 		return (
 			<div className="title-time-fix">
 
   <ul className="nav nav-tabs " role="tablist">
-    <li role="presentation" className={this.timeTab == 'day' ? 'active' : null}><a href="javascript:void(0);" onClick={selectTimeTabMy.bind(TimeTab,'day')} aria-controls="home" role="tab" data-toggle="tab">{intl.get('day')}</a></li>
-    <li role="presentation" className={this.timeTab == 'week' ? 'active' : null}><a href="javascript:void(0);" onClick={selectTimeTabMy} role="tab" data-toggle="tab">{intl.get('week')}</a></li>
-    <li role="presentation" className={this.timeTab == 'month' ? 'active' : null}><a href="javascript:void(0);" onClick={selectTimeTabMy} role="tab" data-toggle="tab">{intl.get('month')}</a></li>
-    <li role="presentation" className={this.timeTab == undefined ? 'active' : null}><a href="javascript:void(0);" onClick={selectTimeTabMy} role="tab" data-toggle="tab">{intl.get('all')}</a></li>
+    <li role="presentation" className={this.state.timeTab == 'day' ? 'active' : null}><a href="javascript:void(0);" onClick={this.selectTimeTabMy.bind(this,'day')} aria-controls="home" role="tab" data-toggle="tab">{intl.get('day')}</a></li>
+    <li role="presentation" className={this.state.timeTab == 'week' ? 'active' : null}><a href="javascript:void(0);" onClick={this.selectTimeTabMy.bind(this,'week')} role="tab" data-toggle="tab">{intl.get('week')}</a></li>
+    <li role="presentation" className={this.state.timeTab == 'month' ? 'active' : null}><a href="javascript:void(0);" onClick={this.selectTimeTabMy.bind(this,'month')} role="tab" data-toggle="tab">{intl.get('month')}</a></li>
+    <li role="presentation" className={this.state.timeTab == 'all' ? 'active' : null}><a href="javascript:void(0);" onClick={this.selectTimeTabMy.bind(this,'all')} role="tab" data-toggle="tab">{intl.get('all')}</a></li>
   </ul>
 </div>
 		);
