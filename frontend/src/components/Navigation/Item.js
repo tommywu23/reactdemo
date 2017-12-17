@@ -70,7 +70,7 @@ const Item = class extends Component {
 					className="right-navigation-box"
 					style={{ color: this.props.selected ? 'white' : '' }}
 				>
-					<div className="stack-imgs imgStackItemType-inline-block">
+					{/* <div className="stack-imgs imgStackItemType-inline-block">
 						{Object.keys(this.props.list).map(
 							key =>
 								key < 6 ? (
@@ -84,7 +84,7 @@ const Item = class extends Component {
 									''
 								)
 						)}
-					</div>
+					</div> */}
 					<div
 						className="font-navigation-explain imgStackItemType-inline-block"
 						style={{ color: this.props.selected ? 'white' : '' }}
