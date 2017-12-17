@@ -26,8 +26,8 @@ html {
 }
 
 body {
-    /*background-color: #efeff6;*/
-    background: #fff;
+    background-color: #efeff6;
+    /* background: #fff; */
     width: 100%;
     min-height: 900px;
     padding: 0;

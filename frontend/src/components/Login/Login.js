@@ -21,12 +21,20 @@ const Login = class extends Component {
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleonFocus = this.handleonFocus.bind(this);
 	}
 
 	handleChange(e) {
 		const { name, value } = e.target;
 		this.setState({ [name]: value });
 	}
+
+handleonFocus(e) {
+	// console.log(111123);
+  // 这里添加类模块类名 .focus
+
+	$(e.target).css('border-bottom','2px solid #0076ff');
+}
 
 	handleSubmit(e) {
 		e.preventDefault();
@@ -55,7 +63,7 @@ const Login = class extends Component {
 							src={companyName}
 						/>
 					</div>
-					<div className="font-login-title loginDesc">Welcome !</div>
+					<div className="font-login-title loginDesc"></div>
 					<form name="form" onSubmit={this.handleSubmit}>
 						<div
 							className={
@@ -68,6 +76,7 @@ const Login = class extends Component {
 								value={username}
 								onChange={this.handleChange}
 								placeholder="Email"
+								onFocus = {this.handleonFocus}
 							/>
 							{submitted &&
 								!username && (
@@ -93,10 +102,10 @@ const Login = class extends Component {
 						</div>
 						<div className="form-group">
 							<button
-								className="btn btn-primary font-login-title"
+								className={"btn btn-primary font-login-title" + (loggingIn ? 'active-loading': '')}
 								style={{ color: 'white' }}
 							>
-								Login
+								{/* <span>Login</span> */}
 							</button>
 							{loggingIn && (
 								<img
