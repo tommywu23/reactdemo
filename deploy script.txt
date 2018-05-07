@@ -1,0 +1,1 @@
+nohup java -Dlink=mongodb://127.0.0.1:27019 -Ddatabase=hulk -Dtimezone=Asia/Shanghai -jar hulk_datamigration-1.0-SNAPSHOT.jar &
