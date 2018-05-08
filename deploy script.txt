@@ -1,1 +1,1 @@
-java -Dlink=mongodb://127.0.0.1:27019 -Ddatabase=hulk -Dtimezone=Asia/Shanghai -jar hulk_datamigration-1.0-SNAPSHOT.jar &
+java -Dlink=mongodb://127.0.0.1:27019 -Ddatabase=hulk -Dtimezone=Asia/Shanghai -Dstartdate=2018-02-01 -Denddate=2018-05-08 -jar hulk_datamigration-1.0-SNAPSHOT.jar &
